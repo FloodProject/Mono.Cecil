@@ -10,6 +10,8 @@ project "Mono.Cecil"
         "./Mono*/**.cs",
         "./System.Runtime.CompilerServices/**.cs"
     }
+
+    buildoptions { "/nowarn:1685" }
     
     links
     {
@@ -22,6 +24,8 @@ project "Mono.Cecil.Pdb"
 
     kind "SharedLib"
     language "C#"
+
+    buildoptions { "/nowarn:0649", "/nowarn:1685" }
     
     files 
     { 
